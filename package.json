@@ -20,8 +20,8 @@
   "author": "Websecurfiy <contact@websecurify.com>",
   "license": "MIT",
   "dependencies": {
-    "js-yaml": "^3.10.0",
-    "marked": "^0.3.6",
+    "js-yaml": "^3.13.1",
+    "marked": "^0.6.2",
     "require-resolve": "0.0.2"
   },
   "devDependencies": {
