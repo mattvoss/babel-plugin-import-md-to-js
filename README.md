@@ -7,14 +7,24 @@ This plugin is very much experimental due to use of the Babel6 API - largely und
 ## Install
 
 ```shell
-npm i @tamu-dor/babel-plugin-import-md-to-js
+npm i @tamu-dor/plugin-import-md-to
 ```
 
 ## Usage
 
+Place in plugins section of babel config
+
+```javascript
+plugins: [
+  ...
+  '@tamu-dor/babel-plugin-import-md-to-js',
+  ...
+],
+```
+
 The following command will convert everything in the `src` folder to `lib` using babel and our plugin.
 
-    babel src/ -d lib/ --presets stage-0,es2015,react --plugins import-md-to-js
+    babel src/ -d lib/ --presets stage-0,es2015,react --plugins @tamu-dor/babel-plugin-import-md-to
 
 Every js file that has a statement such as:
 
