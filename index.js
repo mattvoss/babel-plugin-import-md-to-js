@@ -85,7 +85,7 @@ module.exports = (babel) => {
             const id = t.identifier(node.specifiers[0].local.name)
             const value = toTree(t, mdToJs(fs.readFileSync(mod.src).toString(), true)) // due to bugs we cannot use t.valueToNode
 
-            decl.replaceWith(t.constiableDeclaration('const', [t.constiableDeclarator(id, value)]))
+            decl.replaceWith(t.variableDeclaration('const', [t.variableDeclarator(id, value)]))
           } else if (pathname.endsWith('.md!')) {
             // everything you see here is a complete guesswork but
             // that is what you get without proper documentation -
@@ -97,7 +97,7 @@ module.exports = (babel) => {
             const id = t.identifier(node.specifiers[0].local.name)
             const value = toTree(t, mdToJs(fs.readFileSync(mod.src).toString(), false)) // due to bugs we cannot use t.valueToNode
 
-            decl.replaceWith(t.constiableDeclaration('const', [t.constiableDeclarator(id, value)]))
+            decl.replaceWith(t.variableDeclaration('const', [t.variableDeclarator(id, value)]))
           }
         }
       }
